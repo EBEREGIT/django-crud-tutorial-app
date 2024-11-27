@@ -2,7 +2,20 @@
 
 {% block content %}
 
-    {% include "form.html" %}
+    
+    <h1>Upload Student</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {% for field in form %}
+
+        <section>{{field}}</section>
+        
+        {% endfor %}
+
+        <button type="submit">Submit</button>
+    </form>
 
     <h3>Students</h3>
     <li>
