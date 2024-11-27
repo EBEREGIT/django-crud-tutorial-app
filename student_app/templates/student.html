@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}All Students{% endblock %} 
+
+{% block content %}
+
+    {% include "form.html" %}
+
+    <h3>Students</h3>
+    <li>
+        {{student.id}} - {{student.name}} - {{student.about}} - {{student.pub_date}} -
+        <a href="/students/{{student.id}}/delete">Delete</a>
+    </li>
+
+{% endblock %}

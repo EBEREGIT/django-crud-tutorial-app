@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}All Students{% endblock %} 
+
+{% block content %}
+
+    {% include "form.html" %}
+
+    <h3>Students</h3>
+    <ul>
+    {% for student in students %}
+
+    <li>
+        {{student.id}} - {{student.name}} - {{student.about}} - {{student.pub_date}} -
+        <a href="/students/{{student.id}}">View</a>
+    </li>
+
+    {% endfor %}
+    </ul>
+
+{% endblock %}
