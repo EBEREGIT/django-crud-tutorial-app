@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
   </head>
   <body>
+    <p>Logged in as: <b>{{ request.user.username }}</b></p>
+    
+    <p><a href="{% url 'login' %}">Login</a></p>
+    <p><a href="{% url 'logout' %}">Logout</a></p>
+
     {% block content %}Students Content{% endblock %}
   </body>
 </html>
